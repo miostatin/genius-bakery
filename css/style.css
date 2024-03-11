@@ -1,0 +1,104 @@
+/* Variables */
+
+:root {
+  --color-brand-dark: #465929;
+  --color-brand-light: #819B57;
+  --color-primary-dark: #31261A;
+  --color-primary-light: #FAF4EA;
+}
+
+
+
+/* Global */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--color-primary-dark);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link {
+  color: var(--color-primary-light);
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+}
+
+.link:hover {
+  color: var(--color-brand-light);
+  font-weight: 600;
+}
+
+.button {
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  color: var(--color-primary-light);
+  background-color: var(--color-brand-light);
+  border: 2px solid var(--color-brand-light);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: var(--color-brand-dark);
+  border-color: var(--color-brand-light);
+}
+
+
+/* Hero section */
+
+.hero-title {
+  font-size: 128px;
+  line-height: 192px;
+  font-weight: 900;
+  color: var(--color-primary-light);
+}
+
+.hero-title .accent {
+  color: var(--color-brand-light);
+}
+
+
+/* Traditions-section */
+
+.advantages-list {
+  background-color: var(--color-brand-light);
+  color: var(--color-primary-light);
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.section-title {
+  font-size: 64px;
+  line-height: 84px;
+  font-weight: 900;
+}
+
+.traditions-text .accent {
+  color: var(--color-brand-light);
+}
+
+
+
+
+/* Chefs */
+
+.section-title .accent {
+  color: var(--color-brand-dark);
+}
