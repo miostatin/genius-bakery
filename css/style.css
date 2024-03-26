@@ -99,6 +99,7 @@ address {
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
 }
 
@@ -292,6 +293,21 @@ a {
   right: 0;
 } */
 
+.chefs-list {
+  display: flex;
+  gap: 40px 30px;
+  flex-wrap: wrap;
+}
+
+.chefs-item {
+  flex-basis: calc((100% - 30px) / 2);
+}
+
+.chef-card {
+  display: flex;
+  gap: 30px;
+}
+
 .chef-photo {
   border-radius: 4px 4px 4px 200px;
   box-shadow: -16px 16px 0 0 var(--color-primary-light),
@@ -304,8 +320,22 @@ a {
   font-weight: 600;
 }
 
+.chef-text p {
+  margin-bottom: 24px;
+}
+
+.chef-text p:last-child {
+  margin-bottom: 0;
+}
+
 
 /* Formats */
+.formats-container {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
 .formats-list {
   display: flex;
   gap: 20px;
@@ -340,14 +370,51 @@ a {
   font-weight: 300;
 }
 
+/* Slider */
+.carousel-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--color-primary-dark);
+  cursor: pointer;
+  fill: var(--color-primary-dark);
+  flex-shrink: 0;
+}
+
+.carousel-button:hover {
+  background-color: var(--color-primary-dark);
+  fill: var(--color-primary-light);
+}
+
 
 /* Contact-section */
+.contacts-section {
+  padding-bottom: 96px;
+}
+
+.contacts-container {
+  display: flex;
+  gap: 32px;
+}
+
+
 .contacts-title {
   margin-bottom: 16px;
 }
 
+.contacts-map {
+  flex-shrink: 0;
+  border: none;
+  border-radius: 16px;
+}
+
 /* Footer */
 .footer {
+  padding: 32px 0;
   background-image: url('../images/footer-bg.png');
   background-color: var(--color-primary-dark);
   background-repeat: no-repeat;
@@ -355,17 +422,45 @@ a {
   background-size: cover;
 }
 
-.adress-link {
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav,
+.footer-address {
+  display: flex;
+  flex-basis: 50%;
+  gap: 20px;
+}
+
+.footer-logo,
+.footer-menu,
+.address-list,
+.address-info {
+  flex-grow: 1;
+}
+
+
+.address-link {
   color: var(--color-primary-light);
   font-size: 16px;
   font-weight: 300;
 }
 
-.adress-link:hover {
+.address-link:hover {
   color: var(--color-brand-normal);
 }
 
-.adress-copyright {
+.address-icon {
+  fill: var(--color-primary-light);
+}
+
+.address-icon:hover {
+  fill: var(--color-brand-normal);
+}
+
+.address-copyright {
   font-size: 14px;
   color: #A18268;
 
