@@ -205,7 +205,7 @@
             </p>
 
             <form class="form" name="contact-form" autocomplete="off">
-              <div class="form-field">
+              <div class="contacts-form-field form-field">
                 <input class="form-input" id="user-name" type="text" name="user-name" placeholder="Ім’я">
                 <label class="form-label visually-hidden" for="user-name">
                   Ім’я
@@ -304,6 +304,9 @@
     </div>
   </footer>
 
+
+
+  <!-- Modal -->
   <div class="backdrop is-hidden">
     <div class="modal">
       <button class="modal-btn-close" type="button">Close</button>
@@ -313,28 +316,29 @@
       </p>
       <form class="modal-form" name="modal-form" autocomplete="off">
         <div class="form-field">
-          <input class="form-input" id="user-name" type="text" name="user-name" placeholder="Ім’я">
+          <input class="form-input" id="user-name" type="text" name="user-name" placeholder="Ім’я" minlength="2"
+            maxlength="20">
           <label class="form-label visually-hidden" for="user-name">
             Ім’я
           </label>
         </div>
         <div class="form-field">
-          <input class="form-input" id="user-tel" type="tel" name="phone" placeholder="Телефон">
+          <input class="form-input" id="user-tel" type="tel" name="phone" placeholder="Телефон" required
+            pattern="^\+[0-9]{12}">
           <label class="form-label visually-hidden" for="user-tel">
             Телефон
           </label>
         </div>
         <div class="form-field">
-          <input class="form-input" id="user-email" type="email" name="email" placeholder="Електронна пошта">
+          <input class="form-input" id="user-email" type="email" name="email" placeholder="Електронна пошта" required>
           <label class="form-label visually-hidden" for="user-email">
             Електронна пошта
           </label>
         </div>
 
-
-
-
-        <button class="form-button button" type="submit">Замовити дзвінок</button>
+        <button class="form-button button" type="submit">
+          Замовити дзвінок
+        </button>
         <p class="form-terms">
           Натискаючи на кнопку я погоджуюсь
           <a class="form-terms-link" href="#" target="_blank">з політикою конфіденційності</a>
@@ -345,7 +349,6 @@
 
     </div>
   </div>
-
 
 
   <script src="js/modal.js"></script>
