@@ -1,0 +1,76 @@
+.footer {
+  padding: 32px 0;
+  background-image: url('../images/footer-bg.png');
+  background-color: var(--color-primary-dark);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.footer::before,
+.footer::after {
+  content: '';
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer::before {
+  background-image: url('../images/decor-brad-small.png');
+  width: 180px;
+  height: 120px;
+  left: 0;
+}
+
+.footer::after {
+  background-image: url('../images/decor-brad-large.png');
+  width: 380px;
+  height: 173px;
+  right: 0;
+}
+
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav,
+.footer-address {
+  display: flex;
+  flex-basis: 50%;
+  gap: 20px;
+}
+
+.footer-logo,
+.footer-menu,
+.address-list,
+.address-info {
+  flex-grow: 1;
+}
+
+
+.address-link {
+  color: var(--color-primary-light);
+  font-size: 16px;
+  font-weight: 300;
+  transition: color .3s;
+}
+
+.address-link:hover {
+  color: var(--color-brand-normal);
+}
+
+.address-icon {
+  fill: var(--color-primary-light);
+  transition: fill .3s;
+}
+
+.address-icon:hover {
+  fill: var(--color-brand-normal);
+}
+
+.address-copyright {
+  font-size: 14px;
+  color: #A18268;
+}
