@@ -1,23 +1,38 @@
 .formats-section {
 
-  &__container {
-    display: flex;
-    gap: 32px;
-    align-items: center;
-  }
+	&__slider {
+		display: flex;
+		gap: 32px;
+		align-items: center;
+		justify-content: center;
+	}
 
-  &__title {
-    margin-bottom: 80px;
-  }
+	&__container {
+		overflow: hidden;
+	}
 
-  &__list {
-    display: flex;
-    gap: 20px;
-  }
+	&__list {
+		margin-bottom: 16px;
 
+		@media screen and (min-width: $bp-tablet) {
+			margin-bottom: 32px;
+		}
+	}
 
-  &__item {
-    flex-basis: calc((100% - 40px) / 3);
-  }
+	&__title {
+		margin-bottom: 24px;
+
+		@media screen and (min-width: $bp-tablet) {
+			margin-bottom: 80px;
+		}
+	}
+
+	&__button {
+		display: none;
+
+		@media screen and (min-width:$bp-tablet) {
+			display: flex;
+		}
+	}
 
 }

@@ -1,88 +1,152 @@
 .footer {
-  padding: 32px 0;
-  background-image: url('../images/footer-bg.png');
-  background-color: var(--color-primary-dark);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
+	padding: 32px 0;
+	background-image: url('../images/footer-mobilebg.png');
+	background-color: var(--color-primary-dark);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+
+	@media screen and (min-device-pixel-ratio: 2),
+	(min-resolution: 192dpi),
+	(min-resolution: 2dppx) {
+		background-image: url('../images/footer-mobilebg@2x.png');
+	}
+
+	@media screen and (min-width: $bp-tablet) {
+		background-image: url('../images/footer-bg.png');
+	}
 
 
-  &::before,
-  &::after {
-    content: '';
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: 0;
-  }
+	&::before,
+	&::after {
+		content: '';
+		background-repeat: no-repeat;
+		position: absolute;
+	}
 
-  &::before {
-    background-image: url('../images/decor-brad-small.png');
-    width: 180px;
-    height: 120px;
-    left: 0;
-  }
+	&::before {
+		background-image: url('../images/footer-smallimg-left.png');
+		width: 90px;
+		height: 195px;
+		left: 0;
+		top: 70px;
 
-  &::after {
-    background-image: url('../images/decor-brad-large.png');
-    width: 380px;
-    height: 173px;
-    right: 0;
-  }
+		@media screen and (min-width:$bp-tablet) {
+			background-image: url('../images/decor-brad-small.png');
+			width: 105px;
+			height: 120px;
+			top: 132px;
+		}
 
-  &__container {
-    display: flex;
-    gap: 20px;
-  }
+		@media screen and (min-width: 1145px) {
+			top: 115px;
+		}
+	}
 
-  &__nav,
-  &__address {
-    display: flex;
-    flex-basis: 50%;
-    gap: 20px;
-  }
+	&::after {
+		background-image: url('../images/footer-smallimg-right.png');
+		width: 100px;
+		height: 91px;
+		right: 0;
+		bottom: 0;
 
-  &__logo,
-  &__menu {
-    flex-grow: 1;
-  }
+		@media screen and (min-width:$bp-tablet) {
+			background-image: url('../images/decor-brad-large.png');
+			width: 310px;
+			height: 187px;
+			right: 70px;
+		}
+	}
 
-  &__menu {
-    .link {
-      margin-bottom: 16px;
-    }
-  }
-}
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+
+		@media screen and (min-width: $bp-tablet) {
+			flex-direction: row;
+			align-items: flex-start;
+			flex-basis: 50%;
+		}
+	}
+
+	&__nav,
+	&__address {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+		text-align: center;
+
+		@media screen and (min-width: $bp-tablet) {
+			flex-direction: row;
+			align-items: flex-start;
+			flex-basis: 50%;
+			text-align: left;
+		}
+	}
+
+	&__logo,
+	&__menu {
+		flex-grow: 1;
+	}
+
+	&__menu {
+		.link {
+			margin-bottom: 18px;
+
+			@media screen and (min-width: $bp-tablet) {
+				margin-bottom: 16px;
+			}
+		}
+	}
+
+	&__address-list,
+	&__address-info {
+		flex-grow: 1;
+	}
 
 
-.address-list,
-.address-info {
-  flex-grow: 1;
-}
+	&__address-link {
+		color: var(--color-primary-light);
+		font-size: 16px;
+		font-weight: 300;
+		transition: color .3s;
+		margin-bottom: 18px;
 
+		@media screen and (min-width: $bp-tablet) {
+			margin-bottom: 16px;
+		}
+	}
 
-.address-link {
-  color: var(--color-primary-light);
-  font-size: 16px;
-  font-weight: 300;
-  transition: color .3s;
-  margin-bottom: 16px;
-}
+	&__address-link:hover {
+		color: var(--color-brand-normal);
+	}
 
-.address-link:hover {
-  color: var(--color-brand-normal);
-}
+	&__address-icon {
+		fill: var(--color-primary-light);
+		transition: fill .3s;
+		margin-right: 22px;
+	}
 
-.address-icon {
-  fill: var(--color-primary-light);
-  transition: fill .3s;
-}
+	&__address-icon:hover {
+		fill: var(--color-brand-normal);
+	}
 
-.address-icon:hover {
-  fill: var(--color-brand-normal);
-}
+	&__address-info {
+		.footer__address-link {
+			margin-bottom: 8px;
 
-.address-copyright {
-  font-size: 14px;
-  color: #A18268;
+			@media screen and (min-width: $bp-tablet) {
+				margin-bottom: 16px;
+			}
+		}
+	}
+
+	&__address-copyright {
+		font-size: 14px;
+		color: #A18268;
+	}
 }
