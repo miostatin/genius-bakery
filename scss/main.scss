@@ -12,6 +12,7 @@
 @import 'components/chef-card';
 @import 'components/format-card';
 @import 'components/input';
+@import 'components/pagination';
 
 
 
@@ -22,9 +23,10 @@
 
 @import 'layouts/header';
 @import 'layouts/hero-section';
-@import 'layouts/adventages-section';
+@import 'layouts/advantages-section';
 @import 'layouts/traditions-section';
 @import 'layouts/chefs-section';
 @import 'layouts/formats-section';
 @import 'layouts/contacts-section';
 @import 'layouts/footer';
+@import 'layouts/mobile-menu';
