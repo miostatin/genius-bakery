@@ -1,47 +1,57 @@
 .input {
-  position: relative;
+	position: relative;
 
 
-  &__label {
-    position: absolute;
-    top: 16px;
-    left: 42px;
-  }
+	&__label {
+		position: absolute;
+		top: 16px;
+		left: 42px;
+	}
 
-  &__control {
-    padding: 16px 42px;
-    width: 100%;
-    border: 1px solid var(--color-secondary-dark);
-    border-radius: 8px;
-    background-color: transparent;
-    font-size: 16px;
-    line-height: 1.17;
-    color: var(--color-primary-dark);
+	&__control {
+		padding: 8px 24px;
+		width: 100%;
+		border: 1px solid var(--color-secondary-dark);
+		border-radius: 8px;
+		background-color: transparent;
+		font-size: 16px;
+		line-height: 1.17;
+		color: var(--color-primary-dark);
 
-    &:focus::placeholder {
-      color: var(--color-primary-dark);
-    }
+		@media screen and (min-width: $bp-tablet) {
+			padding: 16px 42px;
+			width: 100%;
+			font-size: 18px;
+		}
 
-    &::placeholder {
-      font-size: 16px;
-      line-height: 1.17;
-      color: var(--color-secondary-dark);
-    }
+		&:focus::placeholder {
+			color: var(--color-primary-dark);
+		}
 
-    &:focus {
-      border-color: var(--color-brand-normal);
-      outline: none;
-    }
+		&::placeholder {
+			font-size: 16px;
+			line-height: 1.17;
+			color: var(--color-secondary-dark);
 
-    &:disabled {
-      border-color: lightgrey;
-      cursor: not-allowed;
-    }
+			@media screen and (min-width: $bp-tablet) {
+				font-size: 18px;
+			}
+		}
 
-    &:disabled::placeholder {
-      color: lightgray;
-    }
-  }
+		&:focus {
+			border-color: var(--color-brand-normal);
+			outline: none;
+		}
+
+		&:disabled {
+			border-color: lightgrey;
+			cursor: not-allowed;
+		}
+
+		&:disabled::placeholder {
+			color: lightgray;
+		}
+	}
 
 
 }
